@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "products-3f398": {
+      "hosting": {
+        "ng-shopping-site": [
+          "products-3f398"
+        ]
+      }
+    }
+  }
+}
