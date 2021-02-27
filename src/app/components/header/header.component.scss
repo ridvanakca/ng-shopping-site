@@ -1,0 +1,47 @@
+.header {
+  padding: 1.1rem;
+  border-bottom: 1px solid #000;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item + .nav-item {
+  margin-left: 3rem;
+}
+
+.nav-link {
+  color: #000;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  opacity: 0.5;
+}
+
+.icon {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+}
