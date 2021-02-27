@@ -25,3 +25,13 @@ img {
 a {
   text-decoration: none;
 }
+
+.logo {
+  font-family: "Playfair Display", serif;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
