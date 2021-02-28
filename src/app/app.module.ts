@@ -11,6 +11,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

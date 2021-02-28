@@ -1,5 +1,5 @@
 import { ApiService } from './../../services/api.service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/components/products/product';
 
 @Component({
@@ -7,7 +7,7 @@ import { Product } from 'src/app/components/products/product';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit {
 
 
   items: Product[];
@@ -19,10 +19,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.apiService.getProducts().subscribe(res => {
       this.items = res; 
     });
-  }
-
-  ngOnDestroy(): void{
-    
   }
 
 }
