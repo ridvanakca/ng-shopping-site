@@ -10,3 +10,18 @@
 .empty {
   text-align: center;
 }
+
+.subtotal {
+  text-align: right;
+  font-size: 1.5rem;
+  color: tomato;
+  border-top: 1px solid #000;
+  margin-top: 10px 0;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .subtotal {
+    text-align: center;
+  }
+}

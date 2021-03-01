@@ -34,4 +34,10 @@ export class CheckoutService {
     // console.log(products?.length);
     return products ? products.length : 0;
   }
+
+  getTotalPrice() {
+    let products = this.getCheckoutProducts();
+    return products?.reduce((acc, prod) => acc + parseFloat(prod.price),0);
+  }
+
 }

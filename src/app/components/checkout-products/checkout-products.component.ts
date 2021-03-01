@@ -1,3 +1,4 @@
+import { CheckoutService } from './../../services/checkout.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../products/product';
 
