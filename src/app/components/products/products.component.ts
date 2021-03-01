@@ -1,3 +1,4 @@
+import { CheckoutService } from './../../services/checkout.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from './product';
 
@@ -10,9 +11,15 @@ export class ProductsComponent implements OnInit {
 
   @Input() products: Product[]; 
 
-  constructor() { }
+  constructor(private checkoutService: CheckoutService) { }
 
   ngOnInit(): void {
   }
+
+  addToCart(product: Product) {
+    this.checkoutService.addProduct(product);
+  }
+
+  
 
 }
