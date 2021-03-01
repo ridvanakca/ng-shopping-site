@@ -1,14 +1,20 @@
 <section class="section">
   <div class="container">
-    <div *ngIf="checkout.getProductsLength() != 0">
-      <h1 class="title">Shopping Cart</h1>
-      <app-checkout-products [checkoutProducts]="items"></app-checkout-products>
-    </div>
-    <div class="empty" *ngIf="checkout.getProductsLength() == 0">
-      <p>no items here</p>
-    </div>
-    <div class="subtotal">
-      <p>Total: {{ checkout.getTotalPrice() }} TL</p>
+    <h1 class="title">Shopping Cart</h1>
+    <div class="flex">
+      <div class="products">
+        <div *ngIf="checkout.getProductsLength() != 0">
+          <app-checkout-products
+            [checkoutProducts]="items"
+          ></app-checkout-products>
+        </div>
+        <div class="empty" *ngIf="checkout.getProductsLength() == 0">
+          <p>no items here</p>
+        </div>
+      </div>
+      <div class="subtotal" *ngIf="checkout.getProductsLength() != 0">
+        <app-checkout-total></app-checkout-total>
+      </div>
     </div>
   </div>
 </section>

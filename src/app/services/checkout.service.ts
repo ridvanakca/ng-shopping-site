@@ -40,4 +40,5 @@ export class CheckoutService {
     return products?.reduce((acc, prod) => acc + parseFloat(prod.price),0);
   }
 
+
 }

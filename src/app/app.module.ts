@@ -13,6 +13,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { CheckoutProductsComponent } from './components/checkout-products/checkout-products.component';
+import { CheckoutTotalComponent } from './components/checkout-total/checkout-total.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CheckoutProductsComponent } from './components/checkout-products/checko
     HomeComponent,
     ProductsComponent,
     CheckoutComponent,
-    CheckoutProductsComponent
+    CheckoutProductsComponent,
+    CheckoutTotalComponent
   ],
   imports: [
     BrowserModule,
