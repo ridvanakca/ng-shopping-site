@@ -1,1 +1,11 @@
-<p>checkout works!</p>
+<section class="section">
+  <div class="container">
+    <div *ngIf="checkout.getProductsLength() != 0">
+      <h1 class="title">Shopping Cart</h1>
+      <app-checkout-products [checkoutProducts]="items"></app-checkout-products>
+    </div>
+    <div class="empty" *ngIf="checkout.getProductsLength() == 0">
+      <p>no items here</p>
+    </div>
+  </div>
+</section>

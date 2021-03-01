@@ -23,8 +23,11 @@
               class="nav-link"
               routerLink="/checkout"
               routerLinkActive="router-link-active"
-              ><i class="fa fa-shopping-cart icon"></i
-            ></a>
+              ><i class="fa fa-shopping-cart icon"></i>
+              <p class="productsNumber">
+                {{ this.checkout.getProductsLength() }}
+              </p>
+            </a>
           </li>
         </ul>
       </nav>

@@ -16,16 +16,22 @@ export class CheckoutService {
     // console.log(products ? {...products} : products)
     if(products){
       products.push(product);
-      localStorage.setItem('checkout-products', JSON.stringify(products));
+      sessionStorage.setItem('checkout-products', JSON.stringify(products));
     }else {
       this.checkoutProducts.push(product);
-      localStorage.setItem('checkout-products',JSON.stringify(this.checkoutProducts));
+      sessionStorage.setItem('checkout-products',JSON.stringify(this.checkoutProducts));
     }
   }
 
   getCheckoutProducts(): Product[] {
-    let products = localStorage.getItem('checkout-products');
+    let products = sessionStorage.getItem('checkout-products');
     // console.log(JSON.parse(products));
     return JSON.parse(products);
+  }
+
+  getProductsLength(): number{
+    let products = this.getCheckoutProducts();
+    // console.log(products?.length);
+    return products ? products.length : 0;
   }
 }

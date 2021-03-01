@@ -1,0 +1,13 @@
+<div class="card" *ngFor="let product of checkoutProducts">
+  <div class="image">
+    <img class="img" [src]="product.image" [alt]="product.title" />
+  </div>
+  <div class="content">
+    <h3 class="title">{{ product.title }}</h3>
+    <p class="desc">{{ product.desc }}</p>
+    <div class="subcontent">
+      <a class="btn">Delete</a>
+      <p class="price">{{ product.price }} TL</p>
+    </div>
+  </div>
+</div>
