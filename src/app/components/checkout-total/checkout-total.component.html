@@ -3,6 +3,6 @@
     <p *ngIf="productsLength == 1">{{ productsLength }} Item</p>
     <p *ngIf="productsLength != 1">{{ productsLength }} Items</p>
   </div>
-  <p class="totalPrice">Total: {{ totalPrice }} TL</p>
+  <p class="totalPrice">Total: {{ totalPrice | number: ".3" }} TL</p>
   <button class="btn">Click to Proceed</button>
 </div>

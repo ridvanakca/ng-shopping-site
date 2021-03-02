@@ -13,10 +13,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: 40%;
 }
 
 .img {
   width: 40%;
+  min-width: 100px;
 }
 
 .content {
@@ -26,6 +28,7 @@
   justify-content: space-evenly;
   background: beige;
   flex-grow: 1;
+  flex-basis: 60%;
 }
 
 .subcontent {
@@ -36,10 +39,9 @@
 }
 
 .btn {
-  font-size: 1.3rem;
+  padding: 0.25em;
   background: teal;
   color: white;
-  width: 20%;
   margin: 0;
   text-align: center;
   border-radius: 5px;
@@ -56,7 +58,11 @@
   .card {
     flex-direction: column;
     text-align: center;
-    // padding: 2rem 0;
+    min-width: 100px;
+  }
+
+  .image {
+    padding: 1rem;
   }
 
   .img {
@@ -72,15 +78,17 @@
     padding: 0.5rem;
   }
 
+  .content {
+    padding: 0;
+  }
+
   .subcontent {
     flex-direction: column;
   }
 
   .btn {
-    font-size: 1.3rem;
     background: teal;
     color: white;
-    width: 25%;
     margin: 0 auto;
     border-radius: 5px;
     cursor: pointer;
