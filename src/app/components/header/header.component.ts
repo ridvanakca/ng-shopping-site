@@ -9,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   
-  constructor(public checkout: CheckoutService) { }
+  constructor(private checkout: CheckoutService) { }
 
   ngOnInit(): void {  }
+
+  get productsLength(): number{
+    return this.checkout.getProductsLength();
+  }
 
 }

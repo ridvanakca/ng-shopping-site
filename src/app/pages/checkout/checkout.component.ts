@@ -10,23 +10,19 @@ import { Product } from 'src/app/components/products/product';
 export class CheckoutComponent implements OnInit {
 
   items: Product[] = [];
-  prodNum;
-  
 
-  constructor(public checkout: CheckoutService) { }
+  constructor(private checkout: CheckoutService) { }
 
   ngOnInit(): void {
     this.getCheckoutProducts();
-    this.getNumber();
   }
 
   getCheckoutProducts() {
    this.items = this.checkout.getCheckoutProducts();
   }
 
-  getNumber(){
-    this.prodNum = this.checkout.getTotalPrice();
-    console.log(this.prodNum);
+  get productsLength(): number{
+    return this.checkout.getProductsLength();
   }
 
   deleteEventHandler(p) {

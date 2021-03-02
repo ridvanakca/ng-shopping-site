@@ -8,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutTotalComponent implements OnInit {
 
-  constructor(public checkout: CheckoutService) { }
+  constructor(private checkout: CheckoutService) { }
 
   ngOnInit(): void {
+  }
+
+  get productsLength(): number{
+    return this.checkout.getProductsLength();
+  }
+
+  get totalPrice(): number{
+    return this.checkout.getTotalPrice();
   }
 
 }

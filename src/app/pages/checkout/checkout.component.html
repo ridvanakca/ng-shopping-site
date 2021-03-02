@@ -3,17 +3,17 @@
     <h1 class="title">Shopping Cart</h1>
     <div class="flex">
       <div class="products">
-        <div *ngIf="checkout.getProductsLength() != 0">
+        <div *ngIf="productsLength != 0">
           <app-checkout-products
             [checkoutProducts]="items"
             (deleteEvent)="deleteEventHandler($event)"
           ></app-checkout-products>
         </div>
-        <div class="empty" *ngIf="checkout.getProductsLength() == 0">
+        <div class="empty" *ngIf="productsLength == 0">
           <p>no items here</p>
         </div>
       </div>
-      <div class="subtotal" *ngIf="checkout.getProductsLength() != 0">
+      <div class="subtotal" *ngIf="productsLength != 0">
         <app-checkout-total></app-checkout-total>
       </div>
     </div>
