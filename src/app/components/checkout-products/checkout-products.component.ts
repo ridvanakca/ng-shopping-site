@@ -1,5 +1,5 @@
 import { CheckoutService } from './../../services/checkout.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../products/product';
 
 @Component({
@@ -10,10 +10,16 @@ import { Product } from '../products/product';
 export class CheckoutProductsComponent implements OnInit {
 
   @Input() checkoutProducts: Product[] = [];
+  @Output() deleteEvent = new EventEmitter<Product>();
 
-  constructor() { }
+  constructor(private checkout: CheckoutService) { }
 
   ngOnInit(): void {
+  }
+
+  deleteProduct(product) {
+    this.checkout.deleteProduct(product);
+    this.deleteEvent.emit(product);
   }
 
 }

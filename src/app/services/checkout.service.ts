@@ -16,15 +16,15 @@ export class CheckoutService {
     // console.log(products ? {...products} : products)
     if(products){
       products.push(product);
-      sessionStorage.setItem('checkout-products', JSON.stringify(products));
+      localStorage.setItem('checkout-products', JSON.stringify(products));
     }else {
       this.checkoutProducts.push(product);
-      sessionStorage.setItem('checkout-products',JSON.stringify(this.checkoutProducts));
+      localStorage.setItem('checkout-products',JSON.stringify(this.checkoutProducts));
     }
   }
 
   getCheckoutProducts(): Product[] {
-    let products = sessionStorage.getItem('checkout-products');
+    let products = localStorage.getItem('checkout-products');
     // console.log(JSON.parse(products));
     return JSON.parse(products);
   }
@@ -40,5 +40,13 @@ export class CheckoutService {
     return products?.reduce((acc, prod) => acc + parseFloat(prod.price),0);
   }
 
+  deleteProduct(product) {
+    let products = this.getCheckoutProducts();
+    let index = products.findIndex(item => item.id == product.id);
+    if(index => 0) {
+      products.splice(index, 1);
+      return localStorage.setItem('checkout-products', JSON.stringify(products));
+    }
+  }
 
 }

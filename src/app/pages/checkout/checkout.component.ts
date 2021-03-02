@@ -29,5 +29,9 @@ export class CheckoutComponent implements OnInit {
     console.log(this.prodNum);
   }
 
+  deleteEventHandler(p) {
+    this.getCheckoutProducts();
+  }
+
 
 }

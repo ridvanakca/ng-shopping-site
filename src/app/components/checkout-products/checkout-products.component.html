@@ -6,7 +6,7 @@
     <h3 class="title">{{ product.title }}</h3>
     <p class="desc">{{ product.desc }}</p>
     <div class="subcontent">
-      <a class="btn">Delete</a>
+      <a class="btn" (click)="deleteProduct(product)">Delete</a>
       <p class="price">{{ product.price }} TL</p>
     </div>
   </div>

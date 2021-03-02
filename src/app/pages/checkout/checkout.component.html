@@ -6,6 +6,7 @@
         <div *ngIf="checkout.getProductsLength() != 0">
           <app-checkout-products
             [checkoutProducts]="items"
+            (deleteEvent)="deleteEventHandler($event)"
           ></app-checkout-products>
         </div>
         <div class="empty" *ngIf="checkout.getProductsLength() == 0">
