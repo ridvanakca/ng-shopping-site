@@ -10,7 +10,8 @@
           ></app-checkout-products>
         </div>
         <div class="empty" *ngIf="productsLength == 0">
-          <p>no items here</p>
+          <p class="info">no items here</p>
+          <button class="btn" routerLink="/home">Go to Shopping</button>
         </div>
       </div>
       <div class="subtotal" *ngIf="productsLength != 0">

@@ -1,13 +1,13 @@
-import { CheckoutService } from './../../services/checkout.service';
+import { CheckoutService } from '../../services/checkout.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { Product } from './product';
+import { Product } from '../../product';
 
 @Component({
   selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class ProductListComponent implements OnInit {
 
   @Input() products: Product[]; 
 

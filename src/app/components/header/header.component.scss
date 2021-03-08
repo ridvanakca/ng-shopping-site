@@ -7,24 +7,24 @@
   list-style: none;
   display: flex;
   align-items: center;
-}
 
-.nav-item {
-  padding: 0.3rem;
-}
+  .nav-item {
+    padding: 0.3rem;
+  }
 
-.nav-item + .nav-item {
-  margin-left: 3rem;
+  .nav-item + .nav-item {
+    margin-left: 3rem;
+  }
 }
 
 .nav-link {
   color: #000;
   text-transform: uppercase;
   display: flex;
-}
 
-.nav-link:hover {
-  opacity: 0.5;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .icon {

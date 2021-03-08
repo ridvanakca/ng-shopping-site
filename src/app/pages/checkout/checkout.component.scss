@@ -1,20 +1,6 @@
-.section {
-  padding: 3rem;
-}
-
 .flex {
   display: flex;
   justify-content: center;
-}
-
-.products {
-  flex-basis: 70%;
-}
-
-.subtotal {
-  flex-basis: 30%;
-  font-size: 1.5rem;
-  padding: 1rem;
 }
 
 .title {
@@ -22,8 +8,38 @@
   font-size: 2rem;
 }
 
+.products {
+  flex-basis: 70%;
+}
+
 .empty {
   text-align: center;
+
+  .info {
+    margin: 2rem 0;
+  }
+}
+
+.btn {
+  width: 75%;
+  max-width: 200px;
+  padding: 0.75em 0.75em;
+  border: none;
+  border-radius: 5px;
+  background-color: tomato;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.75;
+  }
+}
+
+.subtotal {
+  flex-basis: 30%;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 @media (max-width: 768px) {

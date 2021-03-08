@@ -9,11 +9,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  cursor: pointer;
 
-.img {
-  width: 50%;
-  min-width: 100px;
+  &:hover,
+  &:focus {
+    opacity: 0.75;
+  }
+
+  .img {
+    width: 50%;
+    min-width: 100px;
+  }
 }
 
 .price {
@@ -34,4 +40,9 @@
   background-color: tomato;
   color: #fff;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.75;
+  }
 }

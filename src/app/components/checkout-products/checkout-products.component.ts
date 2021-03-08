@@ -1,6 +1,6 @@
 import { CheckoutService } from './../../services/checkout.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Product } from '../products/product';
+import { Product } from '../../product';
 
 @Component({
   selector: 'app-checkout-products',
