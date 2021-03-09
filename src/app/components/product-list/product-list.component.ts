@@ -1,6 +1,7 @@
 import { CheckoutService } from '../../services/checkout.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../../product';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-products',
@@ -9,11 +10,15 @@ import { Product } from '../../product';
 })
 export class ProductListComponent implements OnInit {
 
-  @Input() products: Product[]; 
+  products: Product[];
+  filterText: string = ""; 
 
-  constructor(private checkoutService: CheckoutService) { }
+  constructor(private checkoutService: CheckoutService, private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.apiService.getProducts().subscribe(res => {
+      this.products = res; 
+    });
   }
 
   addToCart(product: Product) {

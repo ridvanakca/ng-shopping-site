@@ -10,15 +10,11 @@ import { Product } from 'src/app/product';
 export class HomeComponent implements OnInit {
 
 
-  items: Product[];
-
-  constructor(private apiService: ApiService) {
+  constructor() {
    }
 
   ngOnInit(): void {
-    this.apiService.getProducts().subscribe(res => {
-      this.items = res; 
-    });
+    
   }
 
 }

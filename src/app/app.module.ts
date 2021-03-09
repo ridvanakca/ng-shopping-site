@@ -14,6 +14,9 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { CheckoutProductsComponent } from './components/checkout-products/checkout-products.component';
 import { CheckoutTotalComponent } from './components/checkout-total/checkout-total.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductFilterPipe } from './pipes/product-filter.pipe';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -26,13 +29,15 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     CheckoutComponent,
     CheckoutProductsComponent,
     CheckoutTotalComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductFilterPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

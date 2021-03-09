@@ -26,4 +26,6 @@ export class ApiService {
   getSingleProduct(id: string) {
     return this.firestore.doc<Product>(`products/${id}`).valueChanges();
   }
+
+  getProductsByCategories(){}
 }
