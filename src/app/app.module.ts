@@ -1,3 +1,4 @@
+import { CategoryComponent } from './components/category/category.component';
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -31,6 +32,7 @@ import { FormsModule } from '@angular/forms';
     CheckoutTotalComponent,
     ProductDetailComponent,
     ProductFilterPipe,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<section class="section">
+<section>
   <div class="filter">
     <input
       class="filterInput"
@@ -14,7 +14,7 @@
     >
       <div
         class="image"
-        routerLink="{{ product.id }}"
+        routerLink="/products/{{ product.id }}"
         routerLinkActive="router-link-active"
       >
         <img class="img" [src]="product.image" alt="" />

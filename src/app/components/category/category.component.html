@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <h3 class="title">Categories:</h3>
+  <ul class="category-list">
+    <li
+      class="category-item"
+      routerLink="/products"
+      routerLinkActive="router-link-active"
+    >
+      all
+    </li>
+    <li
+      class="category-item"
+      *ngFor="let category of categories"
+      routerLink="/home/{{ category.categoryName }}"
+      routerLinkActive="router-link-active"
+      (click)="onSelect(category)"
+    >
+      {{ category.categoryName }}
+    </li>
+  </ul>
+</div>
+<!-- routerLink="/home/{{ category.categoryName }}" -->
+<!-- [routerLinkActiveOptions]="{ exact: true }" -->

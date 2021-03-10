@@ -35,6 +35,10 @@
   margin-left: 0.4rem;
 }
 
+.subheader {
+  background-color: beige;
+}
+
 @media (max-width: 768px) {
   .row {
     flex-direction: column;
